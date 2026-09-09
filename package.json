@@ -1,0 +1,27 @@
+{
+  "name": "web-development-nodejs-stat-dyn",
+  "version": "1.0.0",
+  "description": "Developing nodejs static and dynamic pages",
+  "keywords": [],
+  "homepage": "https://github.com/SteveBenton6/web-dev-nodejs-stat-dyn#readme",
+  "bugs": {
+    "url": "https://github.com/SteveBenton6/web-dev-nodejs-stat-dyn/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SteveBenton6/web-dev-nodejs-stat-dyn.git"
+  },
+  "license": "MIT",
+  "author": "Maximilian Schwarzmüller (Academind GmbH)",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^4.22.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
