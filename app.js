@@ -15,7 +15,11 @@ app.get("/", function (req, res) {
 }); // localhost:3000/
 
 app.get("/restaurants", function (req, res) {
-  res.render("restaurants");
+  const filePath = path.join(__dirname, "data", "restaurants.json");
+  const fileData = fs.readFileSync(filePath);
+  const storedRestaurants = JSON.parse(fileData);
+
+  res.render("restaurants", { numberOfRestaurants: storedRestaurants.length });
 }); // localhost:3000/restaurants
 
 app.get("/confirm", function (req, res) {
