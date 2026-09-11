@@ -20,7 +20,8 @@
   },
   "dependencies": {
     "ejs": "^6.0.1",
-    "express": "^4.22.2"
+    "express": "^4.22.2",
+    "uuid": "^14.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
