@@ -39,6 +39,7 @@ app.get("/restaurants/:id", function (req, res) {
     }
   }
   // No matching Id
+  res.render("404");
 });
 
 app.get("/confirm", function (req, res) {
