@@ -5,6 +5,7 @@ const express = require("express");
 const uuid = require("uuid");
 
 const resData = require("./utils/restaurant-data");
+const defaultRoutes = require("./routes/default");
 
 const app = express();
 app.set("views", path.join(__dirname, "views"));
@@ -13,9 +14,7 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/", function (req, res) {
-  res.render("index");
-}); // localhost:3000/
+app.use("/", defaultRoutes);
 
 app.get("/restaurants", function (req, res) {
   const storedRestaurants = resData.getStoredRestaurants();
@@ -42,10 +41,6 @@ app.get("/restaurants/:id", function (req, res) {
 app.get("/confirm", function (req, res) {
   res.render("confirm");
 }); // localhost:3000/confirm
-
-app.get("/about", function (req, res) {
-  res.render("about");
-}); // localhost:3000/about
 
 app.get("/recommend", function (req, res) {
   res.render("recommend");
